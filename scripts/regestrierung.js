@@ -11,7 +11,7 @@ async function regestrieren() {
         password: passwordInput.value.trim()
     };
     let credentials = JSON.stringify(data);
-    let response = await fetch("http://localhost:8100/regestrierung", {
+    let response = await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/regestrierung", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });
@@ -20,7 +20,7 @@ async function regestrieren() {
     if (responseJson.registered) {
         document.getElementById("success").setAttribute("style", "visibility: visible;");
         await new Promise(resolve => setTimeout(resolve, 2000));
-        window.location.pathname = "sites/login.html";
+        window.location.pathname = "GIS_SoSe21/sites/login.html";
     }
     else {
         alert("Diese Email existiert bereits");

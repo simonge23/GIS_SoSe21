@@ -21,10 +21,10 @@ document.getElementById("submit").addEventListener("click", async () => {
     let rezept = bundleRezept();
     rezept.likedBy = [];
     let rezeptJSON = JSON.stringify(rezept);
-    await fetch("http://localhost:8100/rezept/create", {
+    await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept/create", {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });
-    window.location.pathname = "/sites/meineRezepte.html";
+    window.location.pathname = "GIS_SoSe21/sites/meineRezepte.html";
 });
 //# sourceMappingURL=neuesRezept.js.map

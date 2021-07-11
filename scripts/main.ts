@@ -9,7 +9,7 @@ async function isLoggedIn(): Promise<void> {
       password: localStorage.getItem("password")
     };
     let credentials: string = JSON.stringify(data);
-    let response: Response = await fetch("http://localhost:8100/login", {
+    let response: Response = await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/login", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });
@@ -18,13 +18,13 @@ async function isLoggedIn(): Promise<void> {
 
     if (!responseJson.loggedIn) {
         alert("Your credentails dont match.");
-        window.location.pathname = "sites/login.html";
+        window.location.pathname = "GIS_SoSe21/sites/login.html";
     }
 }
 
 function logout(): void {
     localStorage.clear();
-    window.location.pathname = "sites/login.html";
+    window.location.pathname = "GIS_SoSe21/sites/login.html";
 }
 
 function bundleRezept(): Rezept {

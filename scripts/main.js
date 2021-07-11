@@ -9,7 +9,7 @@ async function isLoggedIn() {
         password: localStorage.getItem("password")
     };
     let credentials = JSON.stringify(data);
-    let response = await fetch("http://localhost:8100/login", {
+    let response = await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/login", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });
@@ -17,12 +17,12 @@ async function isLoggedIn() {
     console.log(responseJson.loggedIn);
     if (!responseJson.loggedIn) {
         alert("Your credentails dont match.");
-        window.location.pathname = "sites/login.html";
+        window.location.pathname = "GIS_SoSe21/sites/login.html";
     }
 }
 function logout() {
     localStorage.clear();
-    window.location.pathname = "sites/login.html";
+    window.location.pathname = "GIS_SoSe21/sites/login.html";
 }
 function bundleRezept() {
     let titelInput = document.getElementById("titel");

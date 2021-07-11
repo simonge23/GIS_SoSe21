@@ -3,13 +3,13 @@ document.getElementById("submit").addEventListener("click", async () => {
     let urlParams: URLSearchParams = new URLSearchParams(window.location.search);
     let id: string = urlParams.get("id");
     let rezeptJSON: string = JSON.stringify(bundleRezept());
-    let response: Response = await fetch(`http://localhost:8100/rezept/update?id=${id}`, {
+    let response: Response = await fetch(`https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept/update?id=${id}`, {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });
     let responseJSON: any = await response.json();
     if (responseJSON.successful_updated === true) {
-        window.location.pathname = "/sites/meineRezepte.html";
+        window.location.pathname = "GIS_SoSe21/sites/meineRezepte.html";
     } else {
         alert("Update didnt work");
     }
@@ -18,7 +18,7 @@ document.getElementById("submit").addEventListener("click", async () => {
 async function fillRezeptIn(): Promise<void> {
     let urlParams: URLSearchParams = new URLSearchParams(window.location.search);
     let id: string = urlParams.get("id");
-    let response: Response = await fetch(`http://localhost:8100/rezept?id=${id}`);
+    let response: Response = await fetch(`https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept?id=${id}`);
     let rezept: Rezept = await response.json();
 
     let titelInput: HTMLInputElement = <HTMLInputElement>document.getElementById("titel");

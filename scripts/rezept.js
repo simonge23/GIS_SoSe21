@@ -3,7 +3,7 @@ generateRezept();
 async function generateRezept() {
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
-    let reponse = await fetch(`http://localhost:8100/rezept?id=${id}`);
+    let reponse = await fetch(`https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept?id=${id}`);
     let rezept = await reponse.json();
     let titel = document.getElementById("titel");
     titel.innerHTML = rezept.titel;
