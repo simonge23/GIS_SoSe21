@@ -82,7 +82,7 @@ async function generateRezepte(url, onClick) {
                                     <div class="info">
                                         <h1>${rezept.titel}</h1>
                                         <p>von ${rezept.author}</p>
-                                        <a href="rezept.html?id=${rezept._id}">Hier zum Rezept</a>
+                                        <a href="./rezept.html?id=${rezept._id}">Hier zum Rezept</a>
                                         <button class="fav" data-liked="${rezept.likedBy.includes(localStorage.getItem("email"))}">${rezept.likedBy.includes(localStorage.getItem("email")) ? "♥" : "♡"}</button>
                                     </div>`;
         rezepteContainer.append(rezeptContainer);

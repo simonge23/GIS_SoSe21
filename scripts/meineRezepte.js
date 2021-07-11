@@ -14,7 +14,7 @@ async function generatePersonalRezepte() {
                                         <h1>${rezept.titel}</h1>
                                         <p>von ${rezept.author}</p>  
                                         <button class="delete">Delete</button>
-                                        <a href="./sites/editRezept.html?id=${rezept._id}"><button>Edit</button></a>
+                                        <a href="./sitses/editRezept.html?id=${rezept._id}"><button>Edit</button></a>
                                     </div>`;
         rezepteContainer.append(rezeptContainer);
         let button = rezepteContainer.getElementsByClassName("delete")[index];
