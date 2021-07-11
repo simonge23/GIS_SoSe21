@@ -13,7 +13,7 @@ async function generatePersonalRezepte(): Promise<void> {
                                         <h1>${rezept.titel}</h1>
                                         <p>von ${rezept.author}</p>  
                                         <button class="delete">Delete</button>
-                                        <a href="./sitses/editRezept.html?id=${rezept._id}"><button>Edit</button></a>
+                                        <a href="./editRezept.html?id=${rezept._id}"><button>Edit</button></a>
                                     </div>`;
         rezepteContainer.append(rezeptContainer);
         let button: HTMLButtonElement = <HTMLButtonElement>rezepteContainer.getElementsByClassName("delete")[index];
