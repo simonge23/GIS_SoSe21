@@ -1,6 +1,6 @@
 generatePersonalRezepte();
 async function generatePersonalRezepte(): Promise<void> {
-    let response: Response = await fetch(`https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezepte?author=${localStorage.getItem("email")}`);
+    let response: Response = await fetch(`https://gissose2020simon.herokuapp.com/rezepte?author=${localStorage.getItem("email")}`);
     let rezepte: Rezept[] = await response.json();
     rezepte.forEach((rezept: Rezept, index: number) => {
         let rezepteContainer: HTMLDivElement = <HTMLDivElement>document.getElementById("alleRezepte");
@@ -20,7 +20,7 @@ async function generatePersonalRezepte(): Promise<void> {
         console.log(button);
         button.addEventListener("click", async () => {
             console.log("deine Mutter");
-            await fetch(`https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept/delete?id=${rezept._id}`);
+            await fetch(`https://gissose2020simon.herokuapp.com/rezept/delete?id=${rezept._id}`);
             window.location.reload();
         });
     });

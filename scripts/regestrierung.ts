@@ -13,7 +13,7 @@ async function regestrieren(): Promise<void> {
       password: passwordInput.value.trim()
     };
     let credentials: string = JSON.stringify(data);
-    let response: Response = await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/regestrierung", {
+    let response: Response = await fetch("https://gissose2020simon.herokuapp.com/regestrierung", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });

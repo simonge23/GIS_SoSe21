@@ -23,7 +23,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     let rezept: Rezept = bundleRezept();
     rezept.likedBy = [];
     let rezeptJSON: string = JSON.stringify(rezept);
-    await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/rezept/create", {
+    await fetch("https://gissose2020simon.herokuapp.com/rezept/create", {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });

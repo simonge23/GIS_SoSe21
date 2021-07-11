@@ -9,7 +9,7 @@ async function isLoggedIn(): Promise<void> {
       password: localStorage.getItem("password")
     };
     let credentials: string = JSON.stringify(data);
-    let response: Response = await fetch("https://gissose2020simon.herokuapp.com/GIS_SoSe21/login", {
+    let response: Response = await fetch("https://gissose2020simon.herokuapp.com/login", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });
