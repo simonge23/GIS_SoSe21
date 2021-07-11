@@ -1,0 +1,140 @@
+body{
+background-color: rgba(172, 161, 115, 0.918);
+}
+
+
+ul {
+    
+    list-style-type: none;
+    margin: 10;
+    padding: 100;
+    overflow: hidden;
+}
+  
+li {
+    display: inline;
+    float: left;
+}
+  
+li a {
+    margin-left: 3em;
+    display: block;
+    color: rgb(32, 32, 32);
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+li img {
+    width: 10%;
+}
+  
+  
+li a:hover {
+    background-color: rgb(151, 140, 120);
+    border-radius: 0%;
+}
+
+label {
+    display: block;
+}
+
+
+.zutatenlisteItem{
+    margin: 10px;
+}
+
+#schrittliste {
+    margin-left: 10px
+}
+
+
+.menge{
+    width: 30px;
+}
+
+.rezept{
+    margin: 100px;
+    display: grid; 
+    grid-template-columns: 4fr 6fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 50px; 
+}
+
+.rezept h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    color:rgb(27, 27, 27);
+}
+
+#rezeptContainer > img {
+    width: 100vh;
+}
+
+img{
+    width: 60vh;
+}
+
+.info{
+    align-content: center;
+}
+
+button{
+    display: inline-block;
+    background-color: #a13232;
+    border-radius: 10%;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    width: 3em;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.button1{
+    background-color: #a13232;
+    border-radius: 10%;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 12em;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 10px; 
+    grid-template-areas: 
+    ". ."; 
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+main h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#rezeptContainer h2{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#schritteContainer{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#zutatenContainer{
+    font-family: Arial, Helvetica, sans-serif;
+}

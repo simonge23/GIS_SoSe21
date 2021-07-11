@@ -1,0 +1,19 @@
+{
+  "name": "gis_2021",
+  "version": "1.0.0",
+  "description": "GIS SoSe21",
+  "main": "server.js",
+  "dependencies": {
+    "mongodb": "^3.6.10",
+    "tslint": "^6.1.3"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.6.20",
+    "nodemon": "^2.0.9"
+  },
+  "scripts": {
+    "server": "nodemon scripts/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="meineRezepte.html">Meine Rezepte</a></li>
+            <li><a href="favoriten.html">Favoriten</a></li>
+            <li><a id="logout">Abmelden</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Rezeptname</h1>
+        <label for="titel">Titel</label>
+        <input type="text" name="titel" id="titel">
+        <label for="imageLink">Bild</label>
+        <input type="text" name="imageLink" id="imageLink">
+
+        <h1>Zutaten</h1>
+        <div id="zutatenliste">
+            <div class="zutatenlisteItem">
+                <input type="text" name="menge" class="menge">
+                <input type="text" name="zutat" class="zutat">
+            </div>
+            <div class="zutatenlisteItem">
+                <input type="text" name="menge" class="menge">
+                <input type="text" name="zutat" class="zutat">
+            </div>
+            <div class="zutatenlisteItem">
+                <input type="text" name="menge" class="menge">
+                <input type="text" name="zutat" class="zutat">
+            </div>
+        </div>
+        <div>
+            <button id="mehrZutaten" class="button1">+ Extra Zutaten</button>
+        </div>
+
+        <h1>Zubereitung</h1>
+        <div id="schrittliste">
+            <div class="schrittlisteItem" id="1">
+                <label for="schritt">Schritt <span>1</span></label>
+                <input type="text" name="schritt" class="schritt">
+            </div>
+            <div class="schrittlisteItem" id="2">
+                <label for="schritt">Schritt <span>2</span></label>
+                <input type="text" name="schritt" class="schritt">
+            </div>
+            <div class="schrittlisteItem" id="3">
+                <label for="schritt">Schritt <span>3</span></label>
+                <input type="text" name="schritt" class="schritt">
+            </div>
+        </div>
+        <div class="mehrContainer">
+            <button id="mehrSchritte" class="button1">+ Extra Zubereitung</button>
+        </div>
+
+        <button id="submit" class="button1">senden</button>
+
+    </main>
+    
+    
+</body>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/neuesRezept.js"></script>
+</html>
