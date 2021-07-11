@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Http = require("http");
 const Mongo = require("mongodb");
-let port = Number(process.env.Port);
+let port = Number(process.env.PORT);
 let databaseUrl = "mongodb+srv://gissose2020:giswise2021@gis-ist-scheisse.zdjmy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 let loginDatenCollection;
 let rezeptCollection;

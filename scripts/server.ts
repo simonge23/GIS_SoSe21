@@ -1,7 +1,7 @@
 import * as Http from "http";
 import * as Mongo from "mongodb";
 
-let port: number = Number (process.env.Port);
+let port: number = Number (process.env.PORT);
 let databaseUrl: string = "mongodb+srv://gissose2020:giswise2021@gis-ist-scheisse.zdjmy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 let loginDatenCollection: Mongo.Collection;
 let rezeptCollection: Mongo.Collection;

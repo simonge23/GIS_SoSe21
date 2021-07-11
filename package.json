@@ -11,7 +11,7 @@
     "@types/mongodb": "^3.6.20"
   },
   "scripts": {
-    "server": "node scripts/server.js"
+    "start": "node scripts/server.js"
   },
   "author": "",
   "license": "ISC"
